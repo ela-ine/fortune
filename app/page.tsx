@@ -2,8 +2,9 @@ import Cookie from "@/components/cookie";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import styles from "./page.module.css"
 
-export default async function Home() {
+export const revalidate = 10;
 
+export default async function Home() {
   const getFortune = async () => {
     var fortune = '';
     if (process.env.NEXT_PUBLIC_API_KEY) {
