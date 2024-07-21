@@ -48,12 +48,8 @@ export default function Cookie(props: { fortune: string }) {
                     onClick={onClick}/>
                 {state == CookieState.Open && 
                 <div>
-                    <Image 
-                        className={styles.cracked}
-                        src={fortuneImg} 
-                        alt={'left half cracked fortune cookie'}/>
                     <p className={styles.fortunetext}>{props.fortune}</p>
-                    </div>}
+                </div>}
                 <Image 
                     id={state == CookieState.Open && styles.left || ''} 
                     className={styles.cracked} src={leftCookieImg1} 
@@ -66,7 +62,6 @@ export default function Cookie(props: { fortune: string }) {
                     alt={'right half cracked fortune cookie'}
                     onClick={onClick}/>
             </div>}
-            {state == CookieState.Open && <p>wow! very cool</p>}
         </div>
     )
 }

@@ -10,14 +10,15 @@ export default async function Home() {
         const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_API_KEY);
         const model = genAI.getGenerativeModel({
         model: "gemini-1.5-flash",
-        systemInstruction: "be oddly specific, quirky, mysterious, but within the bounds of reality. integrate a little bit of internet slang when appropriate. be concise, straight to the point, no intros/outros, and limit responses to 1-2 sentences",
+        systemInstruction: "be oddly specific, quirky, mysterious, but within the bounds of reality. integrate a little bit of internet slang when appropriate. be concise, straight to the point.",
         });
     
-        const prompt = "what's my fortune for today in a single line";
+        const prompt = "generate a new fortune about today in 20 words or less";
     
         const result = await model.generateContent([prompt]);
         fortune = result.response.text();
     }
+    console.log("getting fortune...", fortune)
     return fortune;
   }
 

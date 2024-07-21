@@ -56,17 +56,19 @@
 .fortunetext {
     text-align: center;
     font-family: serif; 
-    color: rgb(21, 15, 79);
+    color: rgb(33, 22, 125);
+    box-shadow: 5px 5px 15px rgb(104, 8, 8);
 
     position: fixed;
-    width: 75%;
-    max-width: 340px;
-    rotate: 3deg;
+    width: 80%;
+    max-width: 360px;
     margin-top: 28%;
     margin-left: 16%;
+    padding: 10px 20px 10px 20px;
 
     animation-name: crack;
     animation-duration: 1s;
+    background-color: papayawhip;
 }
 
 @media screen and (max-width: 600px) {
