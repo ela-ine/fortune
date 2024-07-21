@@ -1,0 +1,76 @@
+#cookiewrapper {
+    width: 50%;
+    height: 50%;
+    max-width: 500px;
+    max-height: 450px;
+    min-width: 350px;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#cookiewrapper img {
+    width: 100%;
+    height: auto;
+    /* transition: all .5s; */
+}
+  
+.cracked {
+    position: fixed;
+    animation-name: crack;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#right {
+    animation-name: move-right;
+    animation-duration: 5s;
+}
+
+#left {
+    animation-name: move-left;
+    animation-duration: 3s;
+}
+
+@keyframes move-right {
+    from {right: 0; opacity: 100%;}
+    to {right: -200%; opacity: 0; display: none;}
+}
+
+@keyframes move-left {
+    from {left: 0; opacity: 100%;}
+    to {left: -200%; opacity: 0; display: none;}
+}
+
+@keyframes crack {
+    0% {rotate: 10deg;}
+    25% {rotate: -9deg}
+    50% {rotate: 5deg;}
+    75% {rotate: -5deg;}
+    100% {rotate: 0deg;}
+}
+
+.fortunetext {
+    text-align: center;
+    font-family: serif; 
+    color: rgb(21, 15, 79);
+
+    position: fixed;
+    width: 75%;
+    max-width: 340px;
+    rotate: 3deg;
+    margin-top: 28%;
+    margin-left: 16%;
+
+    animation-name: crack;
+    animation-duration: 1s;
+}
+
+@media screen and (max-width: 600px) {
+    .fortunetext {
+        font-size: 12px;
+    }
+  }
