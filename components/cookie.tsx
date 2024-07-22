@@ -1,12 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import Image from 'next/image';
 import styles from './cookie.module.css'
 import wholeCookieImg from '../public/cookie-whole.png'
 import rightCookieImg from '../public/cookie-right.png'
-import fortuneImg from '../public/fortune.png'
 import leftCookieImg1 from '../public/cookie-left1.png'
 import leftCookieImg2 from '../public/cookie-left2.png'
 
@@ -18,8 +16,6 @@ enum CookieState {
 
 export default function Cookie(props: { fortune: string }) {
     const [state, setState] = useState(CookieState.Whole);
-
-    useEffect(() => {console.log(state)}, [state])
 
     async function onClick() {
         switch (state) {
@@ -47,8 +43,13 @@ export default function Cookie(props: { fortune: string }) {
                     alt={'left half cracked fortune cookie'}
                     onClick={onClick}/>
                 {state == CookieState.Open && 
-                <div>
+                <div className={styles.fortune}>
                     <p className={styles.fortunetext}>{props.fortune}</p>
+                    {/* <div className={styles.buttonwrapper}>
+                        <button type="button" onClick={}>
+                            another!
+                        </button>
+                    </div> */}
                 </div>}
                 <Image 
                     id={state == CookieState.Open && styles.left || ''} 
