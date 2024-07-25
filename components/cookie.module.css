@@ -59,11 +59,12 @@
     color: rgb(33, 22, 125);
     box-shadow: 5px 5px 15px rgb(104, 8, 8);
 
-    position: fixed;
+    position: absolute;
     width: 80%;
     max-width: 360px;
-    margin-top: 28%;
-    margin-left: 16%;
+    top: 28%;
+    left: 50%;
+    margin-left: -40%;
     padding: 10px 20px 10px 20px;
 
     animation-name: crack;

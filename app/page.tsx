@@ -24,7 +24,7 @@ export default async function Home() {
   }
 
   return (
-    <div>
+    <div style={{height: '100%', width: '100px'}}>
       <p className={styles.desc}>u have a new fortune!<br></br>click on the cookie to open</p>
       <Cookie fortune={await getFortune()}></Cookie>
     </div>

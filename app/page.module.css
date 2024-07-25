@@ -8,6 +8,28 @@
 }
 
 .desc {
-  padding-top: 10%;
-  font-size: 20px;
+  /* padding-top: 900px; */
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  text-align: center;
+    /* margin: auto; */
+}
+
+/* phone sizes */
+@media screen and (min-height: 667px) and (max-height: 1000px) {
+  .desc {
+    width: 262px;
+    font-size: 16px;
+    margin-left: -131px;
+  }
+}
+
+/* desktop sizes */
+@media screen and (min-height: 1001px) {
+  .desc {
+    width: 330px;
+    font-size: 20px;
+    margin-left: -165px;
+  }
 }
